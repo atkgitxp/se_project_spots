@@ -15,6 +15,7 @@
 .card__title {
   margin: 0;
   font-size: 20px;
+  line-height: 1.2; /*line height in pixels divided by font size = 1.2*/
   font-weight: 500;
   text-overflow: ellipsis;
   white-space: nowrap;
