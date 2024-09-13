@@ -8,5 +8,5 @@
   margin: 0 auto;
   font-size: 16px;
   line-height: 1;
-  width: 104px;
+  max-width: 104px;
 }
