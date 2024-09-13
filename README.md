@@ -16,4 +16,4 @@ A responsive web page for social media optimized for desktop and mobile devices.
 
 This page is deployed on Github Pages
 
--Deployment Link:
+-Deployment Link:[https://atkgitxp.github.io/se_project_spots/]
