@@ -1,23 +1,27 @@
 .cards {
   padding: 20px 0 20px 0;
+  margin: 0 auto;
   border-bottom-color: rgba(33, 33, 33, 0.4);
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
 .cards__list {
   list-style-type: none;
+  width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, 413px);
   justify-content: center;
-  gap: 40px 20px; /*row gap 40, column gap 20*/
+  align-items: center;
+  gap: 40px 20px; /*row gap 40, column gap 20*/ /*gap for 320 needs fixing*/
 }
 @media screen and (max-width: 627px) {
   .cards {
-    width: 288px;
+    max-width: 288px;
   }
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
+    gap: 20px 16px;
   }
 }

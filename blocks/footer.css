@@ -1,12 +1,12 @@
 .footer {
   padding: 60px 0;
+  text-align: center;
 }
 
 .footer__text {
   text-wrap: nowrap;
-  opacity: 0.7;
+  color: rgba(33, 33, 33, 0.7);
   margin: 0 auto;
   font-size: 16px;
   line-height: 1;
-  max-width: 104px;
 }
