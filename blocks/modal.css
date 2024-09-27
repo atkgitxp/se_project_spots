@@ -1,0 +1,118 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  visibility: ;
+  padding: 0 16px;
+}
+.modal__opened {
+  visibility: visible;
+}
+.modal__container {
+  max-width: 730px;
+  padding: 32px 50px;
+  color: black;
+  background-color: white;
+  margin: auto 355px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; /*box sizing acccounts for the width of the element and the padding as opposed to width + padding creating a larger than intended element*/
+  border-radius: 8px;
+}
+.modal__close-button {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/close-button.svg);
+  background-color: transparent;
+  border-radius: 8px;
+  border-style: none;
+  opacity: 0.4;
+}
+.modal__close-button:hover {
+  opacity: 1;
+}
+.modal__title {
+  margin: 0 0 32px;
+  padding: 4px 0; /*32 + 4 + 4 = to button 40w x 40h*/
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+}
+.modal__form {
+}
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1; /*17.6 / 16 = 1.1*/
+  color: rgba(33, 33, 33, 0.7);
+}
+
+.modal__input {
+  padding: 16px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+}
+.modal__input:hover {
+  border: 1px solid rgba(33, 33, 33, 1);
+}
+.modal__submit-button {
+  width: 156px;
+  padding: 18px 32px;
+  margin: 0;
+  background-color: rgb(33, 33, 33);
+  color: rgba(252, 245, 229, 1);
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  border-style: none;
+}
+.modal__submit-button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 627px) {
+  .modal {
+    padding: 0 10px;
+  }
+  .modal__container {
+    /* max-width: 300px; this hard-locks container, the container is smoothly transitioning to screen size 320*/
+    padding: 12px 12px 12px 12px;
+    margin: auto 10px;
+  }
+  .modal__close-button {
+    top: 12px;
+    right: 12px;
+  }
+  .modal__label {
+    margin-bottom: 24px;
+  }
+  .modal__title {
+    padding: 10px 0;
+    font-size: 20px;
+    margin: 0 0 24px;
+  }
+  .modal__input {
+    font-size: 16px;
+  }
+  .modal__submit-button {
+    width: 100%;
+  }
+}
