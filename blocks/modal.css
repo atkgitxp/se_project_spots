@@ -9,10 +9,10 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  visibility: ;
+  visibility: hidden;
   padding: 0 16px;
 }
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 .modal__container {
