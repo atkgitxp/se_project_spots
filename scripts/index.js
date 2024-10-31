@@ -103,8 +103,10 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
-function handleProfileFormSubmit(evt) {
+function handleEditFormSubmit(evt) {
   evt.preventDefault();
+  profileName.textContent = editModalNameInput.value;
+  profileDescription.textContent = editModalDescriptionInput.value;
   closeModal(editModal);
 }
 function cardSubmitHandler(evt) {
@@ -141,7 +143,7 @@ previewModalCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
-editFormElement.addEventListener("submit", handleProfileFormSubmit);
+editFormElement.addEventListener("submit", handleEditFormSubmit);
 addCardForm.addEventListener("submit", cardSubmitHandler);
 
 initialCards.forEach((item) => {
