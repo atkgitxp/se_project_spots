@@ -1,3 +1,6 @@
+.card {
+  position: relative;
+}
 .card__image {
   height: 413px;
   width: 100%;
@@ -24,6 +27,24 @@
   overflow: hidden;
   max-width: 80%;
 }
+.card__delete-button {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  top: 10px;
+  right: 10px;
+  background-image: url(../images/delete-icon.svg);
+  background-color: transparent;
+  object-fit: contain;
+  border-style: hidden;
+  transition: 0.15s ease-in; /* remove element from document flow
+  position top right, z-index? absolute position of card relative position */
+}
+.card__delete-button:hover {
+  background-image: url(../images/delete-icon-hover.svg);
+}
 .card__like-button {
   background-image: url(../images/like.svg);
   background-size: contain;
@@ -41,6 +62,19 @@
 .card__like-button:hover {
   cursor: pointer;
   opacity: 1;
+}
+.card__like-button_liked {
+  background-image: url(../images/like-icon-liked.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 20px;
+  border: none;
+  opacity: 1;
+}
+.card__like-button_liked:hover {
+  opacity: 0.4;
 }
 @media screen and (max-width: 627px) {
   .card__image {

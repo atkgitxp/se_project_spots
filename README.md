@@ -1,4 +1,4 @@
-# Project 3: Spots
+# Project 3, 4, and 5: Spots
 
 A site to share images.
 
@@ -11,6 +11,7 @@ A responsive web page for social media optimized for desktop and mobile devices.
 -HTML
 -CSS
 -Responsive Design
+-Javascript
 
 ## Deployment
 

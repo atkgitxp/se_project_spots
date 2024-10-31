@@ -11,21 +11,53 @@
   align-items: center;
   visibility: hidden;
   padding: 0 16px;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 .modal_opened {
   visibility: visible;
+  opacity: 1;
 }
-.modal__container {
+.modal__content {
   max-width: 730px;
+  width: 100%;
+  box-sizing: border-box; /*box sizing acccounts for the width of the element and the padding as opposed to width + padding creating a larger than intended element*/
+
   padding: 32px 50px;
-  color: black;
   background-color: white;
   margin: auto 355px;
   position: relative;
-  width: 100%;
-  box-sizing: border-box; /*box sizing acccounts for the width of the element and the padding as opposed to width + padding creating a larger than intended element*/
   border-radius: 8px;
 }
+
+.modal__content_type_preview {
+  padding: 0 0 0 0;
+  background-color: transparent;
+}
+
+.modal__image {
+  width: 100%;
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.modal__caption_background {
+  margin-right: auto;
+  padding: 4px 8px;
+  max-width: max-content;
+  border-radius: 8px;
+  background-color: rgba(33, 33, 33, 1);
+}
+
+.modal__caption {
+  font-family: "Poppins";
+  color: #f1f1f1;
+  margin: 0;
+}
+
 .modal__close-button {
   position: absolute;
   top: 32px;
@@ -41,6 +73,15 @@
 .modal__close-button:hover {
   opacity: 1;
 }
+
+.modal__close_type_preview {
+  background-image: url(../images/close-button-lite.svg);
+  top: 0;
+  right: -48.5px;
+  opacity: 1;
+  padding: 0;
+}
+
 .modal__title {
   margin: 0 0 32px;
   padding: 4px 0; /*32 + 4 + 4 = to button 40w x 40h*/
@@ -49,6 +90,7 @@
   line-height: 1;
 }
 .modal__form {
+  font-weight: 500;
 }
 .modal__label {
   display: flex;
@@ -92,7 +134,7 @@
   .modal {
     padding: 0 10px;
   }
-  .modal__container {
+  .modal__content {
     /* max-width: 300px; this hard-locks container, the container is smoothly transitioning to screen size 320*/
     padding: 12px 12px 12px 12px;
     margin: auto 10px;
@@ -104,6 +146,11 @@
   .modal__label {
     margin-bottom: 24px;
   }
+
+  .modal__close_type_preview {
+    top: -48px;
+    right: 8px;
+  }
   .modal__title {
     padding: 10px 0;
     font-size: 20px;
@@ -114,5 +161,8 @@
   }
   .modal__submit-button {
     width: 100%;
+  }
+  .modal__image {
+    max-width: none;
   }
 }
