@@ -128,6 +128,7 @@ profileModalEditButton.addEventListener("click", () => {
 });
 
 addCardModalBtn.addEventListener("click", () => {
+  addCardModal.querySelector(".modal__form").reset();
   openModal(addCardModal);
 });
 
