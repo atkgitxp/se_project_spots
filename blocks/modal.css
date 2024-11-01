@@ -49,7 +49,8 @@
 }
 
 .modal__caption {
-  margin-right: auto;
+  /* margin-right: auto; */
+  margin: 0 auto 0 0;
   padding: 4px 8px;
   max-width: max-content;
   border-radius: 8px;
@@ -151,6 +152,7 @@
   }
   .modal__content_type_preview {
     padding: 0 0;
+    margin: auto 0;
   }
   .modal__close-button {
     top: 12px;
@@ -159,7 +161,7 @@
   .modal__label {
     margin-bottom: 24px;
   }
-  .modal__close_type_preview {
+  .modal__close-button_type_preview {
     top: -42.5px;
     right: 0;
   }

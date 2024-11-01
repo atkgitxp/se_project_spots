@@ -8,7 +8,7 @@ const initialCards = [
   {
     name: "Restaurant terrace",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/2-photo-by-ceiline-from-pexels.jpg",
-    alt: "restaurant terrace",
+    alt: "restaurant terrace streetside",
   },
   {
     name: "An outdoor cafe",
@@ -98,6 +98,7 @@ function getCardElement(data) {
     openModal(previewModal);
     previewModalImage.src = data.link;
     previewModalImageCaption.textContent = data.name;
+    previewModalImage.alt = data.alt || data.name;
   });
   return cardElement;
 }

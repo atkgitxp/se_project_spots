@@ -86,7 +86,6 @@
   .card__title {
     max-width: 75%; /*clipping like button at 266-288px?*/
     font-size: 16px;
-    line-height: 1;
   }
   .card__like-button {
     width: 20px;
