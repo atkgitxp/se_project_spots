@@ -31,7 +31,8 @@
 }
 
 .modal__content_type_preview {
-  padding: 0;
+  max-width: fit-content;
+  padding: 0 0;
   margin: auto 0 auto 0;
   background-color: transparent;
   position: relative;
@@ -47,7 +48,7 @@
   background-color: transparent;
 }
 
-.modal__caption_background {
+.modal__caption {
   margin-right: auto;
   padding: 4px 8px;
   max-width: max-content;
@@ -55,7 +56,7 @@
   background-color: rgba(33, 33, 33, 1);
 }
 
-.modal__caption {
+.modal__caption-title {
   font-family: "Poppins";
   color: #f1f1f1;
   margin: 0;
@@ -78,7 +79,7 @@
   opacity: 1;
 }
 
-.modal__close_type_preview {
+.modal__close-button_type_preview {
   background-image: url(../images/close-button-lite.svg);
   opacity: 1;
   top: 0;
@@ -147,6 +148,9 @@
     /* max-width: 300px; this hard-locks container, the container is smoothly transitioning to screen size 320*/
     padding: 12px 12px 12px 12px;
     margin: auto 10px;
+  }
+  .modal__content_type_preview {
+    padding: 0 0;
   }
   .modal__close-button {
     top: 12px;
