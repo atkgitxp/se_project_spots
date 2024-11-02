@@ -149,7 +149,6 @@ addCardModalCloseBtn.addEventListener("click", () => {
 
 previewModalCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
-  previewModal.reset();
 });
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
