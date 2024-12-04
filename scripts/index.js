@@ -1,4 +1,4 @@
-//append
+//append // pass settings object to the validation functions that are called in this file
 const initialCards = [
   {
     name: "Val Thorens",
@@ -36,7 +36,7 @@ const initialCards = [
     alt: "red bridge",
   },
 ];
-console.log(initialCards);
+//console.log(initialCards);
 // Profile elements
 const profileModalEditButton = document.querySelector(".profile__edit-btn");
 const profileName = document.querySelector(".profile__name");
@@ -104,10 +104,31 @@ function getCardElement(data) {
 }
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  const modalList = Array.from(document.querySelectorAll(".modal"));
+
+  modalList.forEach((item) => {
+    item.addEventListener("click", function (evt) {
+      if (evt.target == modal) {
+        //if click is on modal, if click is not modal_image/modal_content
+        closeModal(modal);
+        item.removeEventListener("click", evt);
+      }
+    });
+    addEventListener("keydown", function (evt) {
+      //notes: item.addEventListener for keydown/up did not trigger the Escape to close modal, "document.addEv..." or just start with "addEv..." worked
+      if (evt.key === "Escape") {
+        console.log(evt.key);
+        closeModal(modal);
+        item.removeEventListener("click", evt);
+      }
+    });
+  });
 }
+
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
+
 function handleEditFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
@@ -125,13 +146,18 @@ function cardSubmitHandler(evt) {
   };
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
-  closeModal(addCardModal);
-  // addCardForm.reset();
   evt.target.reset();
+  disableButton(addCardSubmitBtn, settings);
+  closeModal(addCardModal);
 }
 profileModalEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(
+    editFormElement,
+    [editModalNameInput, editModalDescriptionInput],
+    settings
+  ); // use config obj. settings outside bracket good, settings inside bracket bad
   openModal(editModal);
 });
 

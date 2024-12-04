@@ -124,6 +124,18 @@
 .modal__input:hover {
   border: 1px solid rgba(33, 33, 33, 1);
 }
+
+.modal__input_type_error {
+  border-color: rgba(255, 0, 0, 0.6);
+}
+
+.modal__error_visible {
+  display: block;
+  color: rgba(255, 0, 0, 0.7);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
 .modal__submit-button {
   width: 156px;
   padding: 18px 32px;
@@ -138,6 +150,10 @@
 }
 .modal__submit-button:hover {
   opacity: 0.8;
+}
+
+.modal__submit-button_disabled {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (max-width: 627px) {
