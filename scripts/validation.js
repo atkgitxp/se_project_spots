@@ -4,7 +4,7 @@ const settings = {
   submitButtonSelector: ".modal__submit-button",
   inactiveButtonClass: "modal__submit-button_disabled", // without period for classes
   inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
+  errorClass: "modal__label__error_visible",
 };
 
 const showInputError = (formEl, inputEl, errorMsg, config) => {
@@ -25,14 +25,9 @@ const checkInputValidity = (formEl, inputEl, config) => {
   //need config obj
   console.log(inputEl.validationMessage);
   if (!inputEl.validity.valid) {
-    showInputError(
-      formEl,
-      inputEl,
-      inputEl.validationMessage,
-      config.inputErrorClass
-    ); // use config obj
+    showInputError(formEl, inputEl, inputEl.validationMessage, config); // use config obj
   } else {
-    hideInputError(formEl, inputEl, config.inputErrorClass); //use config obj
+    hideInputError(formEl, inputEl, config); //use config obj
   }
 };
 

@@ -114,6 +114,13 @@
   color: rgba(33, 33, 33, 0.7);
 }
 
+.modal__label__error_visible {
+  display: block;
+  color: rgba(255, 0, 0, 0.6);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
 .modal__input {
   padding: 16px 12px;
   border-radius: 8px;
@@ -127,14 +134,7 @@
 }
 
 .modal__input_type_error {
-  border-color: rgba(255, 0, 0, 0.6);
-}
-
-.modal__error_visible {
-  display: block;
-  color: rgba(255, 0, 0, 0.7);
-  font-weight: 500;
-  line-height: 1.1;
+  border: 1px solid rgba(255, 0, 0, 0.6);
 }
 
 .modal__submit-button {
