@@ -7,6 +7,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
 }
 .card__content {
   display: flex;
@@ -28,6 +29,7 @@
   max-width: 80%;
 }
 .card__delete-button {
+  cursor: pointer;
   position: absolute;
   padding: 0;
   margin: 0;
@@ -58,6 +60,7 @@
   color: rgb(33, 33, 33);
   opacity: 0.4;
   transition: opacity 0.15s ease-in;
+  cursor: pointer;
 }
 .card__like-button:hover {
   cursor: pointer;
